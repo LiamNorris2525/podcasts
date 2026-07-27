@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Machine and the Grid</title>
+    <link>https://liamnorris2525.github.io/podcasts/</link>
+    <atom:link href="https://liamnorris2525.github.io/podcasts/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>A single-narrator documentary series on the technologies reshaping computing and energy. Each season takes one subject and builds it from first principles: what AI is, what it runs on, what it does, and the electrical grid now straining to keep up with it.</description>
+    <language>en-us</language>
+    <copyright>(c) 2026 Liam Norris</copyright>
+    <itunes:author>Liam Norris</itunes:author>
+    <itunes:subtitle>How artificial intelligence actually works, and what it takes to power it.</itunes:subtitle>
+    <itunes:summary>A single-narrator documentary series on the technologies reshaping computing and energy. Each season takes one subject and builds it from first principles: what AI is, what it runs on, what it does, and the electrical grid now straining to keep up with it.</itunes:summary>
+    <itunes:type>serial</itunes:type>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://liamnorris2525.github.io/podcasts/cover.jpg"/>
+    <itunes:category text="Technology"></itunes:category>
+    <item>
+      <title>Who Runs the Grid — 4. The Patchwork and the Seams</title>
+      <description>Let's do something concrete to end on. Let's say you want to build a power plant, a solar farm, a gas plant, doesn't matter, and connect it to the grid. Follow that one act through the system, and every layer of control we've discussed lights up in turn, like a switchboard.</description>
+      <itunes:summary>Let's do something concrete to end on. Let's say you want to build a power plant, a solar farm, a gas plant, doesn't matter, and connect it to the grid. Follow that one act through the system, and every layer of control we've discussed lights up in turn, like a switchboard.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/WhoRunsTheGrid_Phase4_ThePatchworkAndTheSeams.mp3" length="12039597" type="audio/mpeg"/>
+      <guid isPermaLink="false">a2b03459d2ae3e9276f2770548bb15ef7b19f0a5</guid>
+      <pubDate>Thu, 16 Jul 2026 23:42:51 GMT</pubDate>
+      <itunes:duration>12:32</itunes:duration>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Who Runs the Grid — 3. The Deal and the Great Unbundling</title>
+      <description>At the dawn of the electricity industry, in the early nineteen-hundreds, there was a real question about how this new business should be organized. And one of the most influential answers came from a man named Samuel Insull, a former secretary to Thomas Edison who built a power empire in Chicago.</description>
+      <itunes:summary>At the dawn of the electricity industry, in the early nineteen-hundreds, there was a real question about how this new business should be organized. And one of the most influential answers came from a man named Samuel Insull, a former secretary to Thomas Edison who built a power empire in Chicago.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/WhoRunsTheGrid_Phase3_TheDealAndTheGreatUnbundling.mp3" length="13556397" type="audio/mpeg"/>
+      <guid isPermaLink="false">af8ae0b98011ba55e258493c7161d37abc09dcb9</guid>
+      <pubDate>Thu, 16 Jul 2026 23:40:50 GMT</pubDate>
+      <itunes:duration>14:07</itunes:duration>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Who Runs the Grid — 2. Air Traffic Control for Electrons</title>
+      <description>Let's clear up the alphabet soup, because I think it's the single biggest reason people bounce off this subject. FERC, NERC, ISO, RTO, TO, PUC, BA. It sounds like a specialist's private code, and it makes the whole system feel deliberately opaque. It isn't.</description>
+      <itunes:summary>Let's clear up the alphabet soup, because I think it's the single biggest reason people bounce off this subject. FERC, NERC, ISO, RTO, TO, PUC, BA. It sounds like a specialist's private code, and it makes the whole system feel deliberately opaque. It isn't.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/WhoRunsTheGrid_Phase2_AirTrafficControlForElectrons.mp3" length="12908205" type="audio/mpeg"/>
+      <guid isPermaLink="false">72cc0d1cf09b93f30130f20e352ac3470c79a4f3</guid>
+      <pubDate>Thu, 16 Jul 2026 23:38:35 GMT</pubDate>
+      <itunes:duration>13:26</itunes:duration>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Who Runs the Grid — 1. The Machine That Can't Be Owned</title>
+      <description>Right now, as you listen to this, an almost unimaginable machine is running.</description>
+      <itunes:summary>Right now, as you listen to this, an almost unimaginable machine is running.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/WhoRunsTheGrid_Phase1_TheMachineThatCantBeOwned.mp3" length="11687469" type="audio/mpeg"/>
+      <guid isPermaLink="false">f347d49be05a3dd00e8f1b68892ae8219d548935</guid>
+      <pubDate>Thu, 16 Jul 2026 23:36:31 GMT</pubDate>
+      <itunes:duration>12:10</itunes:duration>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Agents — 4. The Long Leash</title>
+      <description>Imagine you hire a brilliant, eager, blazingly fast personal assistant. Total recall, works around the clock, does exactly what you ask. But this assistant has one strange flaw: they cannot tell the difference between an instruction from you and an instruction they read somewhere else.</description>
+      <itunes:summary>Imagine you hire a brilliant, eager, blazingly fast personal assistant. Total recall, works around the clock, does exactly what you ask. But this assistant has one strange flaw: they cannot tell the difference between an instruction from you and an instruction they read somewhere else.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/TheAgents_Phase4_TheLongLeash.mp3" length="10999341" type="audio/mpeg"/>
+      <guid isPermaLink="false">693b29c6005a033f2513cd8aecd3edabe4235c63</guid>
+      <pubDate>Tue, 14 Jul 2026 04:02:32 GMT</pubDate>
+      <itunes:duration>11:27</itunes:duration>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Agents — 3. Selling the Work</title>
+      <description>For about forty years, the software business has worked one way. You pay for a seat. A license. The right for one person to use a tool. Your company buys a hundred seats of the accounting software, five hundred logins for the customer system, a subscription per employee per month.</description>
+      <itunes:summary>For about forty years, the software business has worked one way. You pay for a seat. A license. The right for one person to use a tool. Your company buys a hundred seats of the accounting software, five hundred logins for the customer system, a subscription per employee per month.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/TheAgents_Phase3_SellingTheWork.mp3" length="11982381" type="audio/mpeg"/>
+      <guid isPermaLink="false">cc908eeb016dd4a5d901816137949086912d4964</guid>
+      <pubDate>Tue, 14 Jul 2026 04:00:40 GMT</pubDate>
+      <itunes:duration>12:28</itunes:duration>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Agents — 2. The Ninety-Five Percent Problem</title>
+      <description>Let me give you a number that explains more about the last three years of A.I. than almost anything else, and it's just arithmetic. Suppose you've got an agent that's really good. On any single step of a task, it makes the right move ninety-five percent of the time. Nineteen times out of twenty.</description>
+      <itunes:summary>Let me give you a number that explains more about the last three years of A.I. than almost anything else, and it's just arithmetic. Suppose you've got an agent that's really good. On any single step of a task, it makes the right move ninety-five percent of the time. Nineteen times out of twenty.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/TheAgents_Phase2_TheNinetyFivePercentProblem.mp3" length="11676333" type="audio/mpeg"/>
+      <guid isPermaLink="false">78df1be55c6506ca61e541751f9c29ec5558d526</guid>
+      <pubDate>Tue, 14 Jul 2026 03:58:27 GMT</pubDate>
+      <itunes:duration>12:09</itunes:duration>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Agents — 1. The Loop</title>
+      <description>Picture a screen, and nobody at the keyboard. On that screen, a piece of software is working. It reads a file. It thinks for a moment. It runs a command, and the command fails, an error scrolls up in red. It reads the error. It pauses. It edits a line of code, runs the command again, and this time it works.</description>
+      <itunes:summary>Picture a screen, and nobody at the keyboard. On that screen, a piece of software is working. It reads a file. It thinks for a moment. It runs a command, and the command fails, an error scrolls up in red. It reads the error. It pauses. It edits a line of code, runs the command again, and this time it works.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/TheAgents_Phase1_TheLoop.mp3" length="11471277" type="audio/mpeg"/>
+      <guid isPermaLink="false">5a7ca80ca8dab8040ce8bf61987273cfef4af65c</guid>
+      <pubDate>Tue, 14 Jul 2026 03:56:27 GMT</pubDate>
+      <itunes:duration>11:56</itunes:duration>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Bare Metal — 4. The Moat and the Commons</title>
+      <description>In January of 2025, a Chinese lab most Western investors had barely heard of released an A.I. model called DeepSeek. And it did two things at once that seemed almost contradictory. First, it was very good, competitive with the best models the giant American labs had spent billions to build. Second, they gave it away.</description>
+      <itunes:summary>In January of 2025, a Chinese lab most Western investors had barely heard of released an A.I. model called DeepSeek. And it did two things at once that seemed almost contradictory. First, it was very good, competitive with the best models the giant American labs had spent billions to build. Second, they gave it away.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/BareMetal_Phase4_TheMoatAndTheCommons.mp3" length="12826413" type="audio/mpeg"/>
+      <guid isPermaLink="false">5cc0876a7bc95d8dbcda205d0ab432ed4cb04b97</guid>
+      <pubDate>Fri, 10 Jul 2026 01:51:44 GMT</pubDate>
+      <itunes:duration>13:21</itunes:duration>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Bare Metal — 3. The Factory</title>
+      <description>In the summer of 2024, a company took an old appliance factory outside Memphis, Tennessee, and in one hundred and twenty two days, not years, days, turned it into the most powerful A.I. supercomputer on earth. They called it Colossus.</description>
+      <itunes:summary>In the summer of 2024, a company took an old appliance factory outside Memphis, Tennessee, and in one hundred and twenty two days, not years, days, turned it into the most powerful A.I. supercomputer on earth. They called it Colossus.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/BareMetal_Phase3_TheFactory.mp3" length="13329453" type="audio/mpeg"/>
+      <guid isPermaLink="false">deea8ea5b379169dd0dae2162c50a9d4e6bd9b68</guid>
+      <pubDate>Fri, 10 Jul 2026 01:51:38 GMT</pubDate>
+      <itunes:duration>13:53</itunes:duration>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Bare Metal — 1. The Right Kind of Fast</title>
+      <description>There's a photograph from 2012 that ought to hang in a museum somewhere. It's not much to look at. Just a workstation, sitting under a desk at the University of Toronto, with two consumer graphics cards crammed inside it, the kind of cards you'd buy to play video games. Gaming hardware.</description>
+      <itunes:summary>There's a photograph from 2012 that ought to hang in a museum somewhere. It's not much to look at. Just a workstation, sitting under a desk at the University of Toronto, with two consumer graphics cards crammed inside it, the kind of cards you'd buy to play video games. Gaming hardware.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/BareMetal_Phase1_TheRightKindOfFast.mp3" length="12231213" type="audio/mpeg"/>
+      <guid isPermaLink="false">a8b3aa473a2d57924a74a687ff6a89524161ea0e</guid>
+      <pubDate>Fri, 10 Jul 2026 01:51:31 GMT</pubDate>
+      <itunes:duration>12:44</itunes:duration>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Bare Metal — 2. The Accidental Empire</title>
+      <description>In 2006, a chip company most people knew only from the box their son's graphics card came in did something that made no obvious business sense.</description>
+      <itunes:summary>In 2006, a chip company most people knew only from the box their son's graphics card came in did something that made no obvious business sense.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/BareMetal_Phase2_TheAccidentalEmpire.mp3" length="12794541" type="audio/mpeg"/>
+      <guid isPermaLink="false">2997e98c10e7898aa2c40bbc84ea09aa3d3cc343</guid>
+      <pubDate>Fri, 10 Jul 2026 01:30:37 GMT</pubDate>
+      <itunes:duration>13:19</itunes:duration>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Next Token — 1. The Prediction Machine</title>
+      <description>In November of 2022, a company most people had never heard of put a text box on a website. No launch event. No advertising. Just a blinking cursor and an invitation to type something. Five days later, a million people had used it. Two months after that, a hundred million.</description>
+      <itunes:summary>In November of 2022, a company most people had never heard of put a text box on a website. No launch event. No advertising. Just a blinking cursor and an invitation to type something. Five days later, a million people had used it. Two months after that, a hundred million.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/NextToken_Phase1_ThePredictionMachine.mp3" length="15361197" type="audio/mpeg"/>
+      <guid isPermaLink="false">71e71e6c7373702ce5881f3e8f053fc141088b81</guid>
+      <pubDate>Thu, 09 Jul 2026 02:58:49 GMT</pubDate>
+      <itunes:duration>16:00</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Next Token — 2. The Spark</title>
+      <description>Picture a software developer, sometime in 2021. She's got early access to a new tool from a lab called OpenAI. It's called G.P.T. 3, and it is, by any measure of the time, astonishing. She types the opening of a short story, and it continues the story, in the right voice, with real invention.</description>
+      <itunes:summary>Picture a software developer, sometime in 2021. She's got early access to a new tool from a lab called OpenAI. It's called G.P.T. 3, and it is, by any measure of the time, astonishing. She types the opening of a short story, and it continues the story, in the right voice, with real invention.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/NextToken_Phase2_TheSpark.mp3" length="12615981" type="audio/mpeg"/>
+      <guid isPermaLink="false">11822177a839a13adfd8f68c9575be9650f2f4ec</guid>
+      <pubDate>Wed, 08 Jul 2026 04:40:09 GMT</pubDate>
+      <itunes:duration>13:08</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Next Token — 4. The Contenders</title>
+      <description>Imagine a room. In it, a handful of contenders, circling. In one corner, the reigning champion of public attention, the one that started the stampede, backed by staggering resources, with more users than any of the others.</description>
+      <itunes:summary>Imagine a room. In it, a handful of contenders, circling. In one corner, the reigning champion of public attention, the one that started the stampede, backed by staggering resources, with more users than any of the others.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/NextToken_Phase4_TheContenders.mp3" length="13521453" type="audio/mpeg"/>
+      <guid isPermaLink="false">a14c2930a1df5f21c956292558284c911817a444</guid>
+      <pubDate>Wed, 08 Jul 2026 04:37:08 GMT</pubDate>
+      <itunes:duration>14:05</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Next Token — 3. The Two Doors</title>
+      <description>Here's something that might surprise you. In the last day, you almost certainly used one of these language models without opening any chatbot at all. Maybe the email app that finished your sentence for you. The customer service window on some company's website that answered before a human took over.</description>
+      <itunes:summary>Here's something that might surprise you. In the last day, you almost certainly used one of these language models without opening any chatbot at all. Maybe the email app that finished your sentence for you. The customer service window on some company's website that answered before a human took over.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/NextToken_Phase3_TheTwoDoors.mp3" length="12235437" type="audio/mpeg"/>
+      <guid isPermaLink="false">c7f08a609f62066d8218ac33c44b6d5be8736c4a</guid>
+      <pubDate>Wed, 08 Jul 2026 04:22:43 GMT</pubDate>
+      <itunes:duration>12:44</itunes:duration>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
