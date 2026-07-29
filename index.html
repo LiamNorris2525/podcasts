@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Machine and the Grid</title>
+<meta name="description" content="How artificial intelligence actually works, and what it takes to power it.">
+<meta property="og:title" content="The Machine and the Grid">
+<meta property="og:description" content="How artificial intelligence actually works, and what it takes to power it.">
+<meta property="og:image" content="https://liamnorris2525.github.io/podcasts/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://liamnorris2525.github.io/podcasts/cover.jpg">
+<link rel="alternate" type="application/rss+xml" title="The Machine and the Grid" href="https://liamnorris2525.github.io/podcasts/feed.xml">
+<style>
+  :root{
+    --bg:#0b0e18; --panel:#141a2b; --panel-2:#1b2338; --text:#eef1f8;
+    --muted:#96a0bd; --accent:#ffb042; --line:#232b41; --shadow:rgba(0,0,0,.45);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f6f7fb; --panel:#ffffff; --panel-2:#eef1f7; --text:#131826;
+      --muted:#5c6784; --accent:#b5701a; --line:#dfe4ee; --shadow:rgba(20,26,43,.14);
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    padding-bottom:180px;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+  header{padding:56px 0 36px;display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
+  header img{
+    width:200px;height:200px;border-radius:14px;flex:0 0 auto;
+    box-shadow:0 12px 34px var(--shadow);
+  }
+  .head-text{flex:1 1 320px;min-width:280px}
+  h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.12;letter-spacing:-.02em}
+  .subtitle{color:var(--accent);font-weight:600;margin:0 0 14px}
+  .desc{color:var(--muted);margin:0 0 20px;max-width:60ch}
+  .meta{color:var(--muted);font-size:13px;margin:0 0 20px}
+
+  .actions{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    appearance:none;border:1px solid var(--line);background:var(--panel);
+    color:var(--text);font:inherit;font-size:14px;font-weight:600;
+    padding:10px 16px;border-radius:999px;cursor:pointer;text-decoration:none;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn:hover{border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0e18}
+  @media (prefers-color-scheme: light){.btn.primary{color:#fff}}
+
+  h2.season{
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    margin:40px 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  }
+  h2.season span{letter-spacing:0;text-transform:none;font-size:14px;color:var(--text);font-weight:600}
+
+  ol.eps{list-style:none;margin:0;padding:0}
+  li.ep{
+    display:flex;gap:16px;align-items:flex-start;padding:16px;border-radius:12px;
+    cursor:pointer;position:relative;border:1px solid transparent;
+  }
+  li.ep:hover{background:var(--panel);border-color:var(--line)}
+  li.ep.playing{background:var(--panel);border-color:var(--accent)}
+  .num{
+    flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--panel-2);
+    display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--muted);
+    margin-top:2px;
+  }
+  li.ep.playing .num{background:var(--accent);color:#0b0e18}
+  @media (prefers-color-scheme: light){li.ep.playing .num{color:#fff}}
+  .ep-body{flex:1 1 auto;min-width:0}
+  .ep-title{font-weight:600;margin:0 0 4px}
+  .ep-desc{
+    color:var(--muted);font-size:14px;margin:0;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .ep-side{flex:0 0 auto;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums;
+           text-align:right;margin-top:6px}
+  .ep-progress{height:3px;background:var(--line);border-radius:2px;margin-top:8px;overflow:hidden;display:none}
+  .ep-progress > i{display:block;height:100%;background:var(--accent)}
+  li.ep.started .ep-progress{display:block}
+  li.ep.done .ep-title{color:var(--muted)}
+
+  footer{color:var(--muted);font-size:13px;padding:48px 0 8px;border-top:1px solid var(--line);margin-top:48px}
+  footer a{color:var(--muted)}
+
+  /* ---- player bar ---- */
+  #player{
+    position:fixed;left:0;right:0;bottom:0;background:var(--panel);
+    border-top:1px solid var(--line);box-shadow:0 -8px 30px var(--shadow);
+    transform:translateY(110%);transition:transform .22s ease;z-index:50;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  #player.up{transform:none}
+  .pl-inner{max-width:900px;margin:0 auto;padding:12px 20px 14px}
+  .pl-title{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;
+            text-overflow:ellipsis;margin-bottom:8px}
+  .pl-title small{color:var(--muted);font-weight:400}
+  .pl-seek{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);
+           font-variant-numeric:tabular-nums}
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;flex:1 1 auto;height:4px;border-radius:3px;
+    background:var(--line);outline:none;cursor:pointer;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:14px;height:14px;border-radius:50%;
+    background:var(--accent);border:none;cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:14px;height:14px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;
+  }
+  .pl-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px}
+  .ctl{
+    appearance:none;background:none;border:none;color:var(--text);cursor:pointer;
+    padding:8px;border-radius:10px;display:grid;place-items:center;
+  }
+  .ctl:hover{background:var(--panel-2)}
+  .ctl svg{display:block}
+  #playPause{
+    background:var(--accent);color:#0b0e18;width:52px;height:52px;border-radius:50%;
+  }
+  @media (prefers-color-scheme: light){#playPause{color:#fff}}
+  #playPause:hover{background:var(--accent);filter:brightness(1.08)}
+  #rate{
+    font:inherit;font-size:13px;font-weight:700;min-width:52px;color:var(--text);
+    background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:8px 10px;
+    cursor:pointer;
+  }
+  #close{margin-left:auto}
+  .hint{color:var(--muted);font-size:12px;text-align:center;margin:8px 0 0}
+  @media (max-width:560px){
+    header{padding-top:32px;gap:20px}
+    header img{width:120px;height:120px}
+    .pl-controls{gap:8px}
+    .hint{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="cover.jpg" alt="The Machine and the Grid cover art" width="200" height="200">
+    <div class="head-text">
+      <h1>The Machine and the Grid</h1>
+      <p class="subtitle">How artificial intelligence actually works, and what it takes to power it.</p>
+      <p class="desc">A single-narrator documentary series on the technologies reshaping computing and energy. Each season takes one subject and builds it from first principles: what AI is, what it runs on, what it does, and the electrical grid now straining to keep up with it.</p>
+      <p class="meta">16 episodes &middot; 4 seasons &middot; 3h 29m total</p>
+      <div class="actions">
+        <button class="btn primary" id="playFirst">Play latest</button>
+        <a class="btn" id="overcast" href="#">Subscribe in Overcast</a>
+        <button class="btn" id="copyFeed">Copy RSS feed</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="list"></main>
+
+  <footer>
+    <p>Subscribe in any podcast app with the RSS feed:<br>
+      <a href="feed.xml" id="feedLink">https://liamnorris2525.github.io/podcasts/feed.xml</a></p>
+    <p>(c) 2026 Liam Norris</p>
+  </footer>
+</div>
+
+<div id="player" aria-label="Audio player">
+  <div class="pl-inner">
+    <div class="pl-title" id="plTitle"></div>
+    <div class="pl-seek">
+      <span id="cur">0:00</span>
+      <input type="range" id="seek" value="0" min="0" max="100" step="1" aria-label="Seek">
+      <span id="dur">0:00</span>
+    </div>
+    <div class="pl-controls">
+      <button class="ctl" id="back" title="Back 15 seconds" aria-label="Back 15 seconds">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5V1L5 6l6 5V7a6 6 0 1 1-6 6"/>
+          <text x="12.5" y="17.5" font-size="8" font-weight="700" stroke="none" fill="currentColor"
+                font-family="sans-serif">15</text>
+        </svg>
+      </button>
+      <button class="ctl" id="playPause" title="Play / pause" aria-label="Play or pause">
+        <svg id="icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="ctl" id="fwd" title="Forward 15 seconds" aria-label="Forward 15 seconds">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 5V1l6 5-6 5V7a6 6 0 1 0 6 6"/>
+          <text x="4" y="17.5" font-size="8" font-weight="700" stroke="none" fill="currentColor"
+                font-family="sans-serif">15</text>
+        </svg>
+      </button>
+      <button id="rate" title="Playback speed">1&times;</button>
+    </div>
+    <p class="hint">Space to play/pause &middot; arrow keys to skip 15s</p>
+  </div>
+</div>
+
+<script>
+const EPISODES = [{"id": "71e71e6c7373702ce5881f3e8f053fc141088b81", "season": 1, "series": "Next Token", "episode": 1, "title": "The Prediction Machine", "description": "In November of 2022, a company most people had never heard of put a text box on a website. No launch event. No advertising. Just a blinking cursor and an invitation to type something. Five days later, a million people had used it. Two months after that, a hundred million.", "duration": 960, "url": "audio/NextToken_Phase1_ThePredictionMachine.mp3"}, {"id": "11822177a839a13adfd8f68c9575be9650f2f4ec", "season": 1, "series": "Next Token", "episode": 2, "title": "The Spark", "description": "Picture a software developer, sometime in 2021. She's got early access to a new tool from a lab called OpenAI. It's called G.P.T. 3, and it is, by any measure of the time, astonishing. She types the opening of a short story, and it continues the story, in the right voice, with real invention.", "duration": 788, "url": "audio/NextToken_Phase2_TheSpark.mp3"}, {"id": "c7f08a609f62066d8218ac33c44b6d5be8736c4a", "season": 1, "series": "Next Token", "episode": 3, "title": "The Two Doors", "description": "Here's something that might surprise you. In the last day, you almost certainly used one of these language models without opening any chatbot at all. Maybe the email app that finished your sentence for you. The customer service window on some company's website that answered before a human took over.", "duration": 764, "url": "audio/NextToken_Phase3_TheTwoDoors.mp3"}, {"id": "a14c2930a1df5f21c956292558284c911817a444", "season": 1, "series": "Next Token", "episode": 4, "title": "The Contenders", "description": "Imagine a room. In it, a handful of contenders, circling. In one corner, the reigning champion of public attention, the one that started the stampede, backed by staggering resources, with more users than any of the others.", "duration": 845, "url": "audio/NextToken_Phase4_TheContenders.mp3"}, {"id": "a8b3aa473a2d57924a74a687ff6a89524161ea0e", "season": 2, "series": "Bare Metal", "episode": 1, "title": "The Right Kind of Fast", "description": "There's a photograph from 2012 that ought to hang in a museum somewhere. It's not much to look at. Just a workstation, sitting under a desk at the University of Toronto, with two consumer graphics cards crammed inside it, the kind of cards you'd buy to play video games. Gaming hardware.", "duration": 764, "url": "audio/BareMetal_Phase1_TheRightKindOfFast.mp3"}, {"id": "2997e98c10e7898aa2c40bbc84ea09aa3d3cc343", "season": 2, "series": "Bare Metal", "episode": 2, "title": "The Accidental Empire", "description": "In 2006, a chip company most people knew only from the box their son's graphics card came in did something that made no obvious business sense.", "duration": 799, "url": "audio/BareMetal_Phase2_TheAccidentalEmpire.mp3"}, {"id": "deea8ea5b379169dd0dae2162c50a9d4e6bd9b68", "season": 2, "series": "Bare Metal", "episode": 3, "title": "The Factory", "description": "In the summer of 2024, a company took an old appliance factory outside Memphis, Tennessee, and in one hundred and twenty two days, not years, days, turned it into the most powerful A.I. supercomputer on earth. They called it Colossus.", "duration": 833, "url": "audio/BareMetal_Phase3_TheFactory.mp3"}, {"id": "5cc0876a7bc95d8dbcda205d0ab432ed4cb04b97", "season": 2, "series": "Bare Metal", "episode": 4, "title": "The Moat and the Commons", "description": "In January of 2025, a Chinese lab most Western investors had barely heard of released an A.I. model called DeepSeek. And it did two things at once that seemed almost contradictory. First, it was very good, competitive with the best models the giant American labs had spent billions to build. Second, they gave it away.", "duration": 801, "url": "audio/BareMetal_Phase4_TheMoatAndTheCommons.mp3"}, {"id": "5a7ca80ca8dab8040ce8bf61987273cfef4af65c", "season": 3, "series": "The Agents", "episode": 1, "title": "The Loop", "description": "Picture a screen, and nobody at the keyboard. On that screen, a piece of software is working. It reads a file. It thinks for a moment. It runs a command, and the command fails, an error scrolls up in red. It reads the error. It pauses. It edits a line of code, runs the command again, and this time it works.", "duration": 716, "url": "audio/TheAgents_Phase1_TheLoop.mp3"}, {"id": "78df1be55c6506ca61e541751f9c29ec5558d526", "season": 3, "series": "The Agents", "episode": 2, "title": "The Ninety-Five Percent Problem", "description": "Let me give you a number that explains more about the last three years of A.I. than almost anything else, and it's just arithmetic. Suppose you've got an agent that's really good. On any single step of a task, it makes the right move ninety-five percent of the time. Nineteen times out of twenty.", "duration": 729, "url": "audio/TheAgents_Phase2_TheNinetyFivePercentProblem.mp3"}, {"id": "cc908eeb016dd4a5d901816137949086912d4964", "season": 3, "series": "The Agents", "episode": 3, "title": "Selling the Work", "description": "For about forty years, the software business has worked one way. You pay for a seat. A license. The right for one person to use a tool. Your company buys a hundred seats of the accounting software, five hundred logins for the customer system, a subscription per employee per month.", "duration": 748, "url": "audio/TheAgents_Phase3_SellingTheWork.mp3"}, {"id": "693b29c6005a033f2513cd8aecd3edabe4235c63", "season": 3, "series": "The Agents", "episode": 4, "title": "The Long Leash", "description": "Imagine you hire a brilliant, eager, blazingly fast personal assistant. Total recall, works around the clock, does exactly what you ask. But this assistant has one strange flaw: they cannot tell the difference between an instruction from you and an instruction they read somewhere else.", "duration": 687, "url": "audio/TheAgents_Phase4_TheLongLeash.mp3"}, {"id": "f347d49be05a3dd00e8f1b68892ae8219d548935", "season": 4, "series": "Who Runs the Grid", "episode": 1, "title": "The Machine That Can't Be Owned", "description": "Right now, as you listen to this, an almost unimaginable machine is running.", "duration": 730, "url": "audio/WhoRunsTheGrid_Phase1_TheMachineThatCantBeOwned.mp3"}, {"id": "72cc0d1cf09b93f30130f20e352ac3470c79a4f3", "season": 4, "series": "Who Runs the Grid", "episode": 2, "title": "Air Traffic Control for Electrons", "description": "Let's clear up the alphabet soup, because I think it's the single biggest reason people bounce off this subject. FERC, NERC, ISO, RTO, TO, PUC, BA. It sounds like a specialist's private code, and it makes the whole system feel deliberately opaque. It isn't.", "duration": 806, "url": "audio/WhoRunsTheGrid_Phase2_AirTrafficControlForElectrons.mp3"}, {"id": "af8ae0b98011ba55e258493c7161d37abc09dcb9", "season": 4, "series": "Who Runs the Grid", "episode": 3, "title": "The Deal and the Great Unbundling", "description": "At the dawn of the electricity industry, in the early nineteen-hundreds, there was a real question about how this new business should be organized. And one of the most influential answers came from a man named Samuel Insull, a former secretary to Thomas Edison who built a power empire in Chicago.", "duration": 847, "url": "audio/WhoRunsTheGrid_Phase3_TheDealAndTheGreatUnbundling.mp3"}, {"id": "a2b03459d2ae3e9276f2770548bb15ef7b19f0a5", "season": 4, "series": "Who Runs the Grid", "episode": 4, "title": "The Patchwork and the Seams", "description": "Let's do something concrete to end on. Let's say you want to build a power plant, a solar farm, a gas plant, doesn't matter, and connect it to the grid. Follow that one act through the system, and every layer of control we've discussed lights up in turn, like a switchboard.", "duration": 752, "url": "audio/WhoRunsTheGrid_Phase4_ThePatchworkAndTheSeams.mp3"}];
+const SHOW = {"title": "The Machine and the Grid", "author": "Liam Norris"};
+const FEED = "https://liamnorris2525.github.io/podcasts/feed.xml";
+const SKIP = 15;
+const RATES = [1, 1.25, 1.5, 1.75, 2, 0.8];
+
+const $ = id => document.getElementById(id);
+const audio = new Audio();
+audio.preload = "metadata";
+let current = null;
+
+const fmt = s => {
+  if (!isFinite(s) || s < 0) s = 0;
+  s = Math.floor(s);
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+  return h ? `${h}:${String(m).padStart(2,"0")}:${String(sec).padStart(2,"0")}`
+           : `${m}:${String(sec).padStart(2,"0")}`;
+};
+
+/* --- saved position / speed --------------------------------------------- */
+const posKey = ep => "pos:" + ep.id;
+const savedPos = ep => parseFloat(localStorage.getItem(posKey(ep)) || "0") || 0;
+function savePos(){
+  if (current && audio.currentTime > 0) {
+    localStorage.setItem(posKey(current), String(audio.currentTime));
+    paintProgress(current);
+  }
+}
+let rate = parseFloat(localStorage.getItem("rate") || "1") || 1;
+let seeking = false;
+let pendingSeek = 0;
+audio.playbackRate = rate;
+$("rate").innerHTML = rate + "&times;";
+
+/* --- episode list ------------------------------------------------------- */
+function paintProgress(ep){
+  const li = document.querySelector(`li.ep[data-id="${ep.id}"]`);
+  if (!li) return;
+  const p = savedPos(ep), frac = ep.duration ? Math.min(p / ep.duration, 1) : 0;
+  li.classList.toggle("started", p > 5 && frac < 0.98);
+  li.classList.toggle("done", frac >= 0.98);
+  const bar = li.querySelector(".ep-progress > i");
+  if (bar) bar.style.width = (frac * 100).toFixed(1) + "%";
+  const side = li.querySelector(".ep-side");
+  if (side) {
+    side.textContent = frac >= 0.98 ? "played"
+      : (p > 5 ? fmt(ep.duration - p) + " left" : fmt(ep.duration));
+  }
+}
+
+function render(){
+  const list = $("list");
+  let season = null, ol = null;
+  for (const ep of EPISODES) {
+    if (ep.season !== season) {
+      season = ep.season;
+      const h = document.createElement("h2");
+      h.className = "season";
+      h.innerHTML = `Season ${ep.season} <span>${ep.series}</span>`;
+      list.appendChild(h);
+      ol = document.createElement("ol");
+      ol.className = "eps";
+      list.appendChild(ol);
+    }
+    const li = document.createElement("li");
+    li.className = "ep";
+    li.dataset.id = ep.id;
+    li.tabIndex = 0;
+    li.innerHTML = `
+      <div class="num">${ep.episode}</div>
+      <div class="ep-body">
+        <p class="ep-title">${ep.title}</p>
+        <p class="ep-desc">${ep.description}</p>
+        <div class="ep-progress"><i style="width:0"></i></div>
+      </div>
+      <div class="ep-side">${fmt(ep.duration)}</div>`;
+    const go = e => { e.preventDefault(); toggleEpisode(ep); };
+    li.addEventListener("click", go);
+    li.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
+    ol.appendChild(li);
+    paintProgress(ep);
+  }
+}
+
+/* --- playback ----------------------------------------------------------- */
+function toggleEpisode(ep){
+  if (current && current.id === ep.id) { audio.paused ? audio.play() : audio.pause(); return; }
+  load(ep, true);
+}
+
+function load(ep, autoplay){
+  savePos();
+  current = ep;
+  audio.src = ep.url;
+  audio.playbackRate = rate;
+  // iOS ignores currentTime set before metadata loads, so defer the resume.
+  const p = savedPos(ep);
+  pendingSeek = (p > 5 && p < ep.duration - 10) ? p : 0;
+  $("plTitle").innerHTML = `${ep.title} <small>&middot; ${ep.series}, episode ${ep.episode}</small>`;
+  $("dur").textContent = fmt(ep.duration);
+  $("seek").max = Math.floor(ep.duration) || 100;
+  $("player").classList.add("up");
+  document.querySelectorAll("li.ep").forEach(li =>
+    li.classList.toggle("playing", li.dataset.id === ep.id));
+  if (autoplay) audio.play().catch(()=>{});
+  setMediaSession(ep);
+}
+
+function setMediaSession(ep){
+  if (!("mediaSession" in navigator)) return;
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: ep.title,
+    artist: SHOW.author,
+    album: `${SHOW.title} — ${ep.series}`,
+    artwork: [{ src: "cover.jpg", sizes: "3000x3000", type: "image/jpeg" }],
+  });
+  const set = (a, fn) => { try { navigator.mediaSession.setActionHandler(a, fn); } catch(e){} };
+  set("play",  () => audio.play());
+  set("pause", () => audio.pause());
+  set("seekbackward", () => skip(-SKIP));
+  set("seekforward",  () => skip(SKIP));
+  set("previoustrack", () => step(-1));
+  set("nexttrack",     () => step(1));
+}
+
+const skip = d => { audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + d)); };
+
+function step(d){
+  if (!current) return;
+  const i = EPISODES.findIndex(e => e.id === current.id);
+  const next = EPISODES[i + d];
+  if (next) load(next, true);
+}
+
+$("playPause").onclick = () => {
+  if (!current) { load(EPISODES[EPISODES.length - 1], true); return; }
+  audio.paused ? audio.play() : audio.pause();
+};
+$("back").onclick = () => skip(-SKIP);
+$("fwd").onclick  = () => skip(SKIP);
+$("rate").onclick = () => {
+  rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length];
+  audio.playbackRate = rate;
+  localStorage.setItem("rate", String(rate));
+  $("rate").innerHTML = rate + "&times;";
+};
+$("seek").addEventListener("input", e => { audio.currentTime = Number(e.target.value); });
+
+audio.addEventListener("timeupdate", () => {
+  $("cur").textContent = fmt(audio.currentTime);
+  if (!seeking) $("seek").value = Math.floor(audio.currentTime);
+});
+$("seek").addEventListener("pointerdown", () => seeking = true);
+$("seek").addEventListener("pointerup",   () => seeking = false);
+
+audio.addEventListener("loadedmetadata", () => {
+  if (isFinite(audio.duration)) { $("seek").max = Math.floor(audio.duration); $("dur").textContent = fmt(audio.duration); }
+  if (pendingSeek) { audio.currentTime = pendingSeek; pendingSeek = 0; }
+  audio.playbackRate = rate;   // iOS resets rate when a new source loads
+});
+const icon = () => {
+  $("icon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>'
+                                     : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+};
+audio.addEventListener("play", icon);
+audio.addEventListener("pause", () => { icon(); savePos(); });
+audio.addEventListener("ended", () => { if (current) localStorage.setItem(posKey(current), String(current.duration)); step(1); });
+setInterval(savePos, 5000);
+window.addEventListener("beforeunload", savePos);
+
+/* --- page-level buttons and keys ---------------------------------------- */
+$("playFirst").onclick = () => load(EPISODES[EPISODES.length - 1], true);
+$("overcast").href = "https://overcast.fm/podcasts?add=" + encodeURIComponent(FEED);
+$("feedLink").textContent = FEED;
+$("feedLink").href = FEED;
+$("copyFeed").onclick = async () => {
+  try { await navigator.clipboard.writeText(FEED); $("copyFeed").textContent = "Copied"; }
+  catch { $("copyFeed").textContent = FEED; }
+  setTimeout(() => $("copyFeed").textContent = "Copy RSS feed", 1800);
+};
+
+document.addEventListener("keydown", e => {
+  if (["INPUT","TEXTAREA","BUTTON","A"].includes(e.target.tagName)) return;
+  if (e.key === " ")          { e.preventDefault(); $("playPause").onclick(); }
+  if (e.key === "ArrowLeft")  { e.preventDefault(); skip(-SKIP); }
+  if (e.key === "ArrowRight") { e.preventDefault(); skip(SKIP); }
+});
+
+render();
+icon();
+</script>
+</body>
+</html>
