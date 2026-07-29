@@ -17,6 +17,175 @@
     <itunes:image href="https://liamnorris2525.github.io/podcasts/cover.jpg"/>
     <itunes:category text="Technology"></itunes:category>
     <item>
+      <title>The AI Infrastructure Debate — 13. What Is Everyone Missing</title>
+      <description>The blind spots neither host sees discussed enough, led by the one that changed how the other thinks: the grid's markets and physics were never built for loads like this, and a redesign is coming that almost nobody is talking about.</description>
+      <itunes:summary>The blind spots neither host sees discussed enough, led by the one that changed how the other thinks: the grid's markets and physics were never built for loads like this, and a redesign is coming that almost nobody is talking about.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep13_WhatIsEveryoneMissing.mp3" length="10214445" type="audio/mpeg"/>
+      <guid isPermaLink="false">926617c7d310ca4d0aef3f8ed2561a9730f634bb</guid>
+      <pubDate>Wed, 29 Jul 2026 17:30:05 GMT</pubDate>
+      <itunes:duration>10:38</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>13</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 12. AI in 2040</title>
+      <description>Two pictures of 2040, each attacked by the host who painted it, with a hard line drawn between reasonable physical extrapolation and genuine guesses about human behavior.</description>
+      <itunes:summary>Two pictures of 2040, each attacked by the host who painted it, with a hard line drawn between reasonable physical extrapolation and genuine guesses about human behavior.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep12_AIin2040.mp3" length="9550893" type="audio/mpeg"/>
+      <guid isPermaLink="false">7231c87a235655ea1fe132d69ba31131d6f840f4</guid>
+      <pubDate>Wed, 29 Jul 2026 17:27:57 GMT</pubDate>
+      <itunes:duration>9:56</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>12</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 11. What If AI Doesn't Need That Many Data Centers</title>
+      <description>The bear's bear case. Better models, better chips, smaller models and edge computing all compound at once. What if efficiency outpaces demand growth and leaves an oversupply of infrastructure nobody needed?</description>
+      <itunes:summary>The bear's bear case. Better models, better chips, smaller models and edge computing all compound at once. What if efficiency outpaces demand growth and leaves an oversupply of infrastructure nobody needed?</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep11_WhatIfAIDoesntNeedThatManyDataCenters.mp3" length="10806957" type="audio/mpeg"/>
+      <guid isPermaLink="false">d18052b5b8852ccb6e3c319b5f2bbb2fbf2bd8ea</guid>
+      <pubDate>Wed, 29 Jul 2026 17:26:14 GMT</pubDate>
+      <itunes:duration>11:15</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>11</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 10. The Great Data Center Shakeout</title>
+      <description>Merchant developers and the GPU-renting neoclouds are the stars of this cycle. A land rush this frantic has historically ended with a lot of the early rushers gone.</description>
+      <itunes:summary>Merchant developers and the GPU-renting neoclouds are the stars of this cycle. A land rush this frantic has historically ended with a lot of the early rushers gone.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep10_TheGreatDataCenterShakeout.mp3" length="8970669" type="audio/mpeg"/>
+      <guid isPermaLink="false">bd16a919d688e2f4f90b79b237bb0fde255cbc93</guid>
+      <pubDate>Wed, 29 Jul 2026 17:24:15 GMT</pubDate>
+      <itunes:duration>9:20</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>10</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 9. Where Should AI Live</title>
+      <description>Training can run in the middle of nowhere next to a cheap power plant. Inference cannot. That split decides which regions become AI capitals, and hundreds of billions of dollars are choosing locations right now.</description>
+      <itunes:summary>Training can run in the middle of nowhere next to a cheap power plant. Inference cannot. That split decides which regions become AI capitals, and hundreds of billions of dollars are choosing locations right now.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep09_WhereShouldAILive.mp3" length="8883885" type="audio/mpeg"/>
+      <guid isPermaLink="false">143b1dc969379d118009d7df57e3523dd1a97d0d</guid>
+      <pubDate>Wed, 29 Jul 2026 17:22:35 GMT</pubDate>
+      <itunes:duration>9:15</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>9</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 8. Does AI Trigger a Natural Gas Renaissance</title>
+      <description>A deliberate role reversal. The energy realist argues gas wins because it is the only thing ready at scale on the timeline the buildout demands; the tech optimist calls it a trap dressed up as a bridge.</description>
+      <itunes:summary>A deliberate role reversal. The energy realist argues gas wins because it is the only thing ready at scale on the timeline the buildout demands; the tech optimist calls it a trap dressed up as a bridge.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep08_DoesAITriggerANaturalGasRenaissance.mp3" length="9676845" type="audio/mpeg"/>
+      <guid isPermaLink="false">32cf71c247386cebb1e4033e1a0c91cba2f4a381</guid>
+      <pubDate>Wed, 29 Jul 2026 17:20:58 GMT</pubDate>
+      <itunes:duration>10:04</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>8</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 7. Will Nuclear Finally Have Its Moment</title>
+      <description>Data centers want power that is clean, firm and dense, and exactly one technology is all three at once. Whether that finally breaks fifty years of nuclear stagnation is a different question.</description>
+      <itunes:summary>Data centers want power that is clean, firm and dense, and exactly one technology is all three at once. Whether that finally breaks fifty years of nuclear stagnation is a different question.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep07_WillNuclearFinallyHaveItsMoment.mp3" length="9903405" type="audio/mpeg"/>
+      <guid isPermaLink="false">05c7d39d34c9699b5486153e1743a63a8044f80a</guid>
+      <pubDate>Wed, 29 Jul 2026 17:19:15 GMT</pubDate>
+      <itunes:duration>10:18</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 6. Grid vs. Behind the Meter</title>
+      <description>Connect through the utility and the shared grid, or build your own generation on site and skip the grid altogether? One of the most consequential engineering and business calls in the entire buildout, with serious money on both sides.</description>
+      <itunes:summary>Connect through the utility and the shared grid, or build your own generation on site and skip the grid altogether? One of the most consequential engineering and business calls in the entire buildout, with serious money on both sides.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep06_GridVsBehindTheMeter.mp3" length="9001005" type="audio/mpeg"/>
+      <guid isPermaLink="false">63dd83369246d2edb01c883316796b71b85073bf</guid>
+      <pubDate>Wed, 29 Jul 2026 17:17:25 GMT</pubDate>
+      <itunes:duration>9:22</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 5. Power, the New Oil</title>
+      <description>Electricity went from a line item nobody thought about to the first question anyone asks about a new AI campus. Whether power is now the constraint that decides who wins and who gets locked out.</description>
+      <itunes:summary>Electricity went from a line item nobody thought about to the first question anyone asks about a new AI campus. Whether power is now the constraint that decides who wins and who gets locked out.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep05_PowerTheNewOil.mp3" length="9222189" type="audio/mpeg"/>
+      <guid isPermaLink="false">f873418ee35a37814712d8c080a462bade6db227</guid>
+      <pubDate>Wed, 29 Jul 2026 17:15:50 GMT</pubDate>
+      <itunes:duration>9:36</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 4. Is Intelligence Becoming a Commodity</title>
+      <description>Inference costs are collapsing and free open-weight models are closing the gap. If intelligence becomes almost free, does that create enormous profit or eliminate it?</description>
+      <itunes:summary>Inference costs are collapsing and free open-weight models are closing the gap. If intelligence becomes almost free, does that create enormous profit or eliminate it?</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep04_IsIntelligenceBecomingACommodity.mp3" length="11129901" type="audio/mpeg"/>
+      <guid isPermaLink="false">df746c3ff78ebb43d4f9c113fec5b683392eb0f5</guid>
+      <pubDate>Wed, 29 Jul 2026 17:14:10 GMT</pubDate>
+      <itunes:duration>11:35</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 3. Who Actually Makes the Money</title>
+      <description>Trillions moving through chips, clouds, models, apps, power and wires. Where does profit actually pool, and where does it just pass through on its way to the customer? The airline industry as a warning.</description>
+      <itunes:summary>Trillions moving through chips, clouds, models, apps, power and wires. Where does profit actually pool, and where does it just pass through on its way to the customer? The airline industry as a warning.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep03_WhoActuallyMakesTheMoney.mp3" length="11064237" type="audio/mpeg"/>
+      <guid isPermaLink="false">c4c0f46ecd786bf51d124bc5509aa32bd9fc071f</guid>
+      <pubDate>Wed, 29 Jul 2026 17:12:02 GMT</pubDate>
+      <itunes:duration>11:31</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 2. Is There an AI Bubble</title>
+      <description>Can AI be genuinely revolutionary and a financial bubble at the same time? In most people's heads those are opposites. Historically they are best friends.</description>
+      <itunes:summary>Can AI be genuinely revolutionary and a financial bubble at the same time? In most people's heads those are opposites. Historically they are best friends.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep02_IsThereAnAIBubble.mp3" length="10589613" type="audio/mpeg"/>
+      <guid isPermaLink="false">5cbf0ed2e0273acee11e447c7f8a495db5a70447</guid>
+      <pubDate>Wed, 29 Jul 2026 16:35:45 GMT</pubDate>
+      <itunes:duration>11:01</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The AI Infrastructure Debate — 1. Is AI Worth Trillions</title>
+      <description>The opening question: can AI generate enough revenue to justify the capital being poured into it? They land on a split decision, probably yes for the world, not for everyone building it.</description>
+      <itunes:summary>The opening question: can AI generate enough revenue to justify the capital being poured into it? They land on a split decision, probably yes for the world, not for everyone building it.</itunes:summary>
+      <enclosure url="https://liamnorris2525.github.io/podcasts/audio/AIInfraDebate_Ep01_IsAIWorthTrillions.mp3" length="10514349" type="audio/mpeg"/>
+      <guid isPermaLink="false">1b1aaeff5f0bcb774f45b446fa0ae0a41f1c0e99</guid>
+      <pubDate>Wed, 29 Jul 2026 16:33:51 GMT</pubDate>
+      <itunes:duration>10:57</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>Who Runs the Grid — 4. The Patchwork and the Seams</title>
       <description>Let's do something concrete to end on. Let's say you want to build a power plant, a solar farm, a gas plant, doesn't matter, and connect it to the grid. Follow that one act through the system, and every layer of control we've discussed lights up in turn, like a switchboard.</description>
       <itunes:summary>Let's do something concrete to end on. Let's say you want to build a power plant, a solar farm, a gas plant, doesn't matter, and connect it to the grid. Follow that one act through the system, and every layer of control we've discussed lights up in turn, like a switchboard.</itunes:summary>
